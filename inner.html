@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background changer</title>
+    <style>
+        body{
+            background-color: aqua;
+            padding: 50px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        img{
+            height: auto;
+            width: 100%;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+        #color_switcher{
+            text-align: right;
+        }
+        .btn{
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 40;
+            cursor: pointer;
+        }
+        #white{
+            background-color: aliceblue;
+        }
+        #voilet{
+            background-color: #ee82ee;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+        #black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="color_switcher">
+         <span class="btn" id="white" onclick="changebg('#ffffff')"></span>
+         <span class="btn" id="voilet"onclick="changebg('#ee82ee')"></span>
+         <span class="btn" id="aqua" onclick="changebg('#7fffd4')"></span>
+         <span class="btn" id="black" onclick="changebg('#000000')"></span>
+    </div>
+    <h1 class="text">Background changer</h1>
+
+    <img src="images/shop.img.jpg" alt="">
+
+<p class="text">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam impedit cum accusamus vitae? Obcaecati dicta odio quaerat, accusamus esse ipsam, quibusdam modi quisquam maiores natus, molestias laborum harum nulla eligendi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, amet voluptas, modi vel asperiores omnis quidem hic fugiat perspiciatis, fugit voluptatum aut nobis! Aut architecto voluptatem animi dolorum sapiente reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum dolores nemo maiores corporis molestiae deserunt numquam earum ea, ullam, laboriosam repellat perspiciatis assumenda, culpa et dolorem aperiam. Consectetur, nulla?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde eum debitis illum error soluta nisi iure libero adipisci, inventore, doloribus quod! Quam consequuntur ducimus est deserunt autem. Commodi, dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum placeat numquam sit expedita id consequatur recusandae, qui perspiciatis animi ducimus. Rem fugiat quaerat ipsa esse exercitationem nemo, est tempore!
+</p>
+<script> 
+function changebg(color){
+    document.body.style.backgroundColor=color;
+    let txt =document.getElementsByClassName("text");
+       if (color=="#000000"){
+        for(let elm of txt)
+        elm.style.color="white";
+    }
+   else{ 
+        for(let elm of txt)
+        elm.style.color="black";
+    }
+ 
+}
+
+
+</script>
+            
+</body>
+</html>
